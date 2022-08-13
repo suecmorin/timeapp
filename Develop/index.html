@@ -25,14 +25,73 @@
   <body>
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
+      <p class="lead">A simple calendar app for scheduling your work day<br>
+      Current Time and Date:  id="currentDay"></p>
     </header>
-    <div class="container">
+    <div class="container-fluid">
       <!-- Timeblocks go here -->
-    </div>
-
+      <div class= "row">
+        <section class= "col-12 col-md-4 col-lg-3">
+          <div class= "table-responsive">
+          <table class= "table table-bordered custom-table">
+            <thread>
+              <tr>
+                <th scope="col-3"><strong></strong>Time</th>
+                  <th scope="col-9"><strong></strong>Project</th>
+              </tr>
+            </thread>
+            <tbody id="project-display"></tbody>
+            <tr class="clickable-row(9)" id="9"> 
+              <td id=time9 9:00></tdid></td>                             <!--can I use string name 9 as identifier for the row??-->
+              <td id= project9 free></tdid></td>
+              </tr>
+              <tr class="clickable-row(10)" id="10">
+              <td id=time10 10:00></td>
+              <td id=project10 free></td>
+              </tr>
+              <tr class="clickable-row(11)" id="11">
+              <td id=time11 11:00></td>
+              <td id=project11 free></td>
+              </tr>
+              <tr class="clickable-row(12)" id="12">
+              <td id=time12 12:00></td>
+              <td id=project12 lunch></td>
+              </tr>
+              <tr class="clickable-row(13)" id="13">
+              <td id=time13 1:00></td>
+              <td id=project13 free></td>
+              </tr>
+              <tr class="clickable-row(14)" id="14">
+              <td id=time14 2:00></td>
+              <td id=project14 free></td>
+              </tr>
+              <tr class="clickable-row(15)" id="15">
+              <td id=time15 3:00></td>
+              <td id=project15 free></td>
+              </tr>
+              <tr class="clickable-row(16)" id="16">
+              <td id=time16 4:00></td>
+              <td id=project16 free></td>
+            </tr>
+            </table>
+        </div>
+      </section>
+      <!--do I add the form here or do I call it in js??
+      <form id="project-form">
+      <div class="form-group">
+      <label for="project-name-input">Project Name</label>
+      <input type="text" id="project-name-input"  class="form-control" placeholder required />
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary"data-dismiss="modal">Close</button>
+        <button type="submit" class="btn custom-btn">Submit Project Info</button>
+      </div>
+    </form>
+        -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script type = "text/JavaScript" src = " https://MomentJS.com/downloads/moment.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+    <script src= "script.js"></script>
   </body>
 </html>
