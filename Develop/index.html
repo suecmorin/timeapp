@@ -25,8 +25,8 @@
   <body>
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day<br>
-      Current Time and Date:  id="currentDay"></p>
+      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p class="lead" >Current Date and Time:  <span id="currentDay"></span></p>
     </header>
     <div class="container-fluid">
       <!-- Timeblocks go here -->
@@ -41,37 +41,37 @@
               </tr>
             </thread>
             <tbody id="project-display"></tbody>
-            <tr class="clickable-row(9)" id="9"> 
-              <td id=time9 9:00></tdid></td>                             <!--can I use string name 9 as identifier for the row??-->
-              <td id= project9 free></tdid></td>
+            <tr class="clickable-row" data-id="9"> 
+              <td data-id="time-9">9:00</td>                             <!--can I use string name 9 as identifier for the row??-->
+              <td data-id="project-9">free</td>
               </tr>
-              <tr class="clickable-row(10)" id="10">
-              <td id=time10 10:00></td>
-              <td id=project10 free></td>
+              <tr class="clickable-row" data-id="10">
+              <td data-id="time-10">10:00</td>
+              <td data-id="project-10">free</td>
               </tr>
-              <tr class="clickable-row(11)" id="11">
-              <td id=time11 11:00></td>
-              <td id=project11 free></td>
+              <tr class="clickable-row" data-id="11">
+              <td data-id="time-11">11:00</td>
+              <td data-id="project-11">free</td>
               </tr>
-              <tr class="clickable-row(12)" id="12">
-              <td id=time12 12:00></td>
-              <td id=project12 lunch></td>
+              <tr class="clickable-row" data-id="12">
+              <td data-id="time-12">12:00</td>
+              <td data-id="project-12">lunch</td>
               </tr>
-              <tr class="clickable-row(13)" id="13">
-              <td id=time13 1:00></td>
-              <td id=project13 free></td>
+              <tr class="clickable-row" data-id="13">
+              <td data-id="time-13">1:00</td>
+              <td data-id="project-13">free</td>
               </tr>
-              <tr class="clickable-row(14)" id="14">
-              <td id=time14 2:00></td>
-              <td id=project14 free></td>
+              <tr class="clickable-row" data-id="14">
+              <td data-id="time-14">2:00</td>
+              <td data-id="project-14">free</td>
               </tr>
-              <tr class="clickable-row(15)" id="15">
-              <td id=time15 3:00></td>
-              <td id=project15 free></td>
+              <tr class="clickable-row" data-id="15">
+              <td data-id="time-15">3:00</td>
+              <td data-id="project-15">free</td>
               </tr>
-              <tr class="clickable-row(16)" id="16">
-              <td id=time16 4:00></td>
-              <td id=project16 free></td>
+              <tr class="clickable-row" data-id="16">
+              <td data-id="time-16">4:00</td>
+              <td data-id="project-16">free</td>
             </tr>
             </table>
         </div>
@@ -89,8 +89,6 @@
     </form>
         -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script type = "text/JavaScript" src = " https://MomentJS.com/downloads/moment.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
     <script src= "script.js"></script>
   </body>
