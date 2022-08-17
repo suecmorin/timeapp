@@ -16,13 +16,14 @@ setInterval(displayTime, 1000); //updates the time at the top of the page every 
 showTimeappt();
 
 function showTimeappt() {
-  var now = moment().hour();
+  //var now = moment().hours();
+  var now = 12;
   console.log(now);                                                         //get hour in 24-hour time
   for (i = 9; i < 17; i++) {
-    var y = time-blockEl;
-    var hour = $(this).attr('id');
+    var hour = $("row time-block").attr("id");
+    console.log(hour);
     if (now < hour) {                                    //compare hour with id in class "time-block" in HTML
-      descriptionEl.attr("class", "past col-sm-10 description"); //if hour is greater than id, change color based on ".past" in style.css
+      descriptionEl.attr("class", "past col-sm-10 description"); //if hour is greater than id, change color based on ".past" in style.css file
     } else if (now === hour) {
       descriptionEl.attr("class", "present col-sm-10 description");
 
@@ -30,8 +31,8 @@ function showTimeappt() {
   }
 }
 
-//$(saveBtnEl).click(function(event) {
-// event.preventDefault();
-//var  desc = descriptionEl.val();
-//$("textarea").val(localStorage.setItem);
-//};
+$(saveBtnEl).click(function(event) {
+ event.preventDefault();
+ var  desc = descriptionEl.val();
+$("textarea").val(localStorage.setItem);
+});
