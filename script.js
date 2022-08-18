@@ -1,8 +1,6 @@
 var currentDayEl = $("#currentDay");
-var timeBlockEl = $("#time-block");
-var hourEl = $("#time-block #id")
-var descriptionEl = $("#description");
-var saveBtnEl = $("saveBtn");
+
+//var now = moment().hours();      
 
 function displayTime() {
   //display the time at the top of the page
@@ -10,29 +8,33 @@ function displayTime() {
 
   currentDayEl.text(rightNow);
 }
+    
 
 setInterval(displayTime, 1000); //updates the time at the top of the page every second
 
 showTimeappt();
 
 function showTimeappt() {
-  //var now = moment().hours();
-  var now = 12;
-  console.log(now);                                                         //get hour in 24-hour time
-  for (i = 9; i < 17; i++) {
-    var hour = $("row time-block").attr("id");
-    console.log(hour);
-    if (now < hour) {                                    //compare hour with id in class "time-block" in HTML
-      descriptionEl.attr("class", "past col-sm-10 description"); //if hour is greater than id, change color based on ".past" in style.css file
+    var time = $(".time-block");
+    time.each(function() {                                //each replaces for loop, runs on each .time-block in HTML/parse takes each id separately/
+    var hour = parseInt($(this).attr("id"));                     //Int converts string "9" to integer to do the math comparisons    
+                                                                       //this refers to .time-block
+    if (now > hour) {                                                //compare hour with id in class "time-block" in HTML
+      $(this).children("col-sm-10").attr("class", "past col-sm-10 description");      //if current hour is greater than id, add class ".past" from style.css file
+                                                                                     //textarea is a child of description class
     } else if (now === hour) {
-      descriptionEl.attr("class", "present col-sm-10 description");
+      $(this).children("col-sm-10").attr("class", "present col-sm-10 description");
 
-    } else descriptionEl.attr("class", "future col-sm-10 description");
-  }
+    } else {
+      $(this).children("col-sm-10").attr("class", "future col-sm-10 description");
+    }
+  })
 }
 
-$(saveBtnEl).click(function(event) {
+button.on("click", (function(event) {
  event.preventDefault();
- var  desc = descriptionEl.val();
-$("textarea").val(localStorage.setItem);
+ var descrip = document.GetElementById("mtg").value;
+var parent = $(this).parent().attr("id");                                    //this refers to textarea "mtg", parent is time-block
+localStorage.setItem(parent, descrip);
+
 });
